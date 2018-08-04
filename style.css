@@ -289,10 +289,11 @@ button::-moz-focus-inner {
   margin-top: 4px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .download {
     left: 16px;
     top: 16px;
+    display: none;
   }
 
   .download img {
