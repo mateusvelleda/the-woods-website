@@ -4,208 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Woods - Alexitmia</title>
-    <style>
-        html, body, div, span, object, iframe,
-        h1, h2, h3, h4, h5, h6,
-        p, blockquote, pre, abbr, code, em, img, small, strong,
-        sub, sup,
-        ol, ul, li,
-        fieldset, form, label, legend,
-        table, tbody, tfoot, thead, tr, th, td,
-        article, aside, footer, header, nav,
-        section, time,
-        audio, video {
-            padding: 0;
-            border: 0;
-            margin: 0;
-            background: transparent;
-            font-size: 100%;
-            font-weight: inherit;
-            vertical-align: baseline;
-        }
-
-        article,
-        aside,
-        figure,
-        footer,
-        header,
-        nav,
-        section {
-            display: block;
-        }
-
-        html {
-            box-sizing: border-box;
-            overflow-y: scroll;
-        }
-
-        html,
-        body {
-            background-color: #fff;
-            color: #000;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: inherit;
-        }
-
-        img,
-        object {
-            max-width: 100%;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        th {
-            font-weight: bold;
-            vertical-align: bottom;
-        }
-
-        td {
-            font-weight: normal;
-            vertical-align: top;
-        }
-
-        input,
-        select {
-            vertical-align: middle;
-        }
-
-        input[type='radio'] {
-            vertical-align: text-bottom;
-        }
-
-        input[type='checkbox'] {
-            vertical-align: bottom;
-        }
-
-        strong {
-            font-weight: bold;
-        }
-
-        label,
-        input[type='file'] {
-            cursor: pointer;
-        }
-
-        input,
-        select,
-        textarea {
-            border: 0;
-            margin: 0;
-        }
-
-        button,
-        input[type='button'],
-        input[type='submit'] {
-            padding: 0;
-            border: 0;
-            border-radius: 0;
-            margin: 0;
-            background: transparent;
-            cursor: pointer;
-        }
-
-        button::-moz-focus-inner {
-            padding: 0;
-            border: 0;
-        }
-
-        .social-nav {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-
-        }
-
-        @media screen and (min-width: 700px) {
-            .social-nav {
-                top: 36px;
-                right: 36px;
-            }
-        }
-        .social-nav li {
-            margin: 0 0 .5rem;
-        }
-        .social-nav a {
-            text-align: center;
-            width: 2rem;
-            height: 2rem;
-            line-height: 2rem;
-            display: block;
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.5rem;
-        }
-
-        .social-nav a.hidden {
-            display: none;
-        }
-
-        .slogan {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0);
-            max-width: 50%;
-            max-height: 50%;
-        }
-
-        .media-channels {
-            position: absolute;
-            bottom: 0;
-            width: 96vw;
-            left: 2vw;
-        }
-
-        .media-channels li {
-            width: 25%;
-            float: left;
-        }
-        .media-channels li a {
-            display: block;
-            text-align: center;
-        }
-        .media-channels li a img {
-            max-width: 20vw;
-        }
-
-        @media screen and (min-width: 700px) {
-            .media-channels {
-                width: auto;
-                transform: translateX(-50%);
-                left: 50%;
-            }
-            .media-channels li a {
-                padding: 0 1rem;
-            }
-            .media-channels li a img {
-                max-width: 100px;
-            }
-        }
-
-        /*html, body {*/
-            /*height: 100%;*/
-        /*}*/
-
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./public/icomoon/style.css">
 </head>
 <body>
@@ -215,27 +14,27 @@
 <nav class="social-nav">
     <ul>
         <li>
-            <a href="https://www.facebook.com/TheWoodsRock/" target="_blank" title="Turn sound on">
+            <a href="https://www.facebook.com/TheWoodsRock/" target="_blank" title="Facebook TheWoodsRock">
                 <span class="icon-facebook2"></span>
             </a>
         </li>
         <li>
-            <a href="https://www.instagram.com/thewoodsrock/" target="_blank" title="Turn sound on">
+            <a href="https://www.instagram.com/thewoodsrock/" target="_blank" title="Instagram TheWoodsRock">
                 <span class="icon-instagram"></span>
             </a>
         </li>
         <li>
-            <a href="mailto:thewooodsrocks@gmail.com" title="Turn sound on">
+            <a href="mailto:thewooodsrocks@gmail.com" title="Gmail TheWoodsRock">
                 <span class="icon-envelope"></span>
             </a>
         </li>
         <li>
-            <a href="javascript:" title="Turn sound on" class="toggle-sound" data-sound="1">
+            <a href="javascript:" title="Turn sound on" class="toggle-sound hidden" data-sound="0">
                 <span class="icon-volume-high"></span>
             </a>
         </li>
         <li>
-            <a href="javascript:" title="Turn sound off" class="toggle-sound hidden" data-sound="0">
+            <a href="javascript:" title="Turn sound off" class="toggle-sound" data-sound="1">
                 <span class="icon-volume-mute2"></span>
             </a>
         </li>
@@ -244,27 +43,32 @@
 <nav class="media-channels">
     <ul>
         <li>
-            <a href="https://itunes.apple.com/br/artist/the-woods/1412314099?l=en">
+            <a href="https://itunes.apple.com/br/artist/the-woods/1412314099?l=en" target="_blank">
                 <img src="./public/icons/itunes_icon.png" alt="iTunes">
             </a>
         </li>
         <li>
-            <a href="https://open.spotify.com/artist/1Fz1Xx8tcR6IgHwwBdmeSH">
+            <a href="https://open.spotify.com/artist/1Fz1Xx8tcR6IgHwwBdmeSH" target="_blank">
                 <img src="./public/icons/spotify_icon.png" alt="Spotify">
             </a>
         </li>
         <li>
-            <a href="https://www.youtube.com/user/thewoodsrocks">
+            <a href="https://www.youtube.com/user/thewoodsrocks" target="_blank">
                 <img src="./public/icons/youtube_icon.png" alt="YouTube">
             </a>
         </li>
         <li>
-            <a href="https://www.deezer.com/br/artist/48914811">
+            <a href="https://www.deezer.com/br/artist/48914811" target="_blank">
                 <img src="./public/icons/deezer_icon.png" alt="Deezer">
             </a>
         </li>
     </ul>
 </nav>
+
+<a class="download" href="https://drive.google.com/open?id=1mmhncRxCEzO5c6clt4-MoI4TrTzRbJOA" target="_blank">
+  <img src="./public/icons/capa_capa.png" alt="The Woods Alexitimia - Cover">
+  <img src="./public/icons/download_icon.png" alt="The Woods Alexitimia - Download">
+</a>
 <img src="./public/icons/alexitimia-thewoods.png" alt="The Woods Alexitimia" class="slogan">
 <script src="./index.js"></script>
 </body>
