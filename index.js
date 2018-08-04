@@ -10,7 +10,21 @@ soundButtons.forEach(el => {
     })
 })
 
-video.play()
+setTimeout(() => window.scrollTo(0, 1), 99)
+
+video.muted = true
+video
+    .play()
+    .catch(() => {
+        const playButton = document.getElementById('play')
+
+        playButton.style.display = 'block'
+        playButton
+            .addEventListener('click', () => {
+                video.play()
+                playButton.style.display = 'none'
+            })
+    })
 
 const effect = () => {
   const social = document.querySelector('.social-nav')

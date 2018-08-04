@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?n4uq6t') format('truetype'),
-    url('fonts/icomoon.woff?n4uq6t') format('woff'),
-    url('fonts/icomoon.svg?n4uq6t#icomoon') format('svg');
+    url('fonts/icomoon.ttf?yt8bhj') format('truetype'),
+    url('fonts/icomoon.woff?yt8bhj') format('woff'),
+    url('fonts/icomoon.svg?yt8bhj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,9 @@
 .icon-envelope:before {
   content: "\e900";
 }
+.icon-play:before {
+  content: "\e912";
+}
 .icon-volume-high:before {
   content: "\ea26";
 }
@@ -37,4 +40,7 @@
 }
 .icon-instagram:before {
   content: "\ea92";
+}
+.icon-spotify:before {
+  content: "\ea94";
 }
