@@ -38,6 +38,16 @@ const effect = () => {
   download.classList.add('enter')
 }
 
+[...document.querySelectorAll('a')].forEach(a => {
+    a.addEventListener('click', () => {
+        try {
+            ga('send', 'event', 'click', a.title)
+        } catch (e) {
+            console.warn(e)
+        }
+    })
+})
+
 setTimeout(() => {
   effect()
-}, 1000)
+}, 999)
