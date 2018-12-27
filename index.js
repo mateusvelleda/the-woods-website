@@ -4,8 +4,7 @@ const toggleSoundButtons = () => soundButtons.forEach(button => button.classList
 
 soundButtons.forEach(el => {
     el.addEventListener('click', () => {
-        if (el.getAttribute('data-sound') == 1) video.muted = false
-        else video.muted = true
+        video.muted = !(el.getAttribute('data-sound') == 1)
         toggleSoundButtons()
     })
 })
@@ -14,31 +13,26 @@ setTimeout(() => window.scrollTo(0, 1), 99)
 
 video.muted = true
 video
-    .play()
-    .catch(() => {
-        const playButton = document.getElementById('play')
+  .play()
+  .catch(() => {
+    const playButton = document.getElementById('play')
 
-        playButton.style.display = 'block'
-        playButton
-            .addEventListener('click', () => {
-                video.play()
-                playButton.style.display = 'none'
-            })
-    })
+    playButton.style.display = 'block'
+    playButton
+      .addEventListener('click', () => {
+        video.play()
+        playButton.style.display = 'none'
+      })
+  })
+
+const qsaToArr = (selector) => [...document.querySelectorAll(selector)]
 
 const effect = () => {
-  const social = document.querySelector('.social-nav')
-  const media = document.querySelector('.media-channels')
-  const slogan = document.querySelector('.slogan')
-  const download = document.querySelector('.download')
-
-  social.classList.add('enter')
-  media.classList.add('enter')
-  slogan.classList.add('enter')
-  download.classList.add('enter')
+  qsaToArr('.social-nav, .media-channels, .slogan, .download')
+    .forEach(el => el.classList.add('enter'))
 }
 
-[...document.querySelectorAll('a')].forEach(a => {
+qsaToArr('a').forEach((a) => {
     a.addEventListener('click', () => {
         try {
             ga('send', 'event', 'click', a.title)
@@ -48,6 +42,4 @@ const effect = () => {
     })
 })
 
-setTimeout(() => {
-  effect()
-}, 999)
+setTimeout(effect, 999)
